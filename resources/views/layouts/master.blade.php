@@ -156,7 +156,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                     <img src="/img/boy.png" class="img-circle elevation-2" alt="User Image">
                 </div>
                 <div class="info">
-                    <a href="#" class="d-block">Alexander Pierce</a>
+                    <a href="#" class="d-block">Admin</a>
                 </div>
             </div>
 
@@ -170,7 +170,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                         <a href="#" class="nav-link active">
                             <i class="nav-icon fas fa-tachometer-alt"></i>
                             <p>
-                                Starter Pages
+                                DashBoard
                                 <i class="right fas fa-angle-left"></i>
                             </p>
                         </a>
@@ -189,6 +189,110 @@ scratch. This page gets rid of all links and provides the needed markup only.
                             </li>
                         </ul>
                     </li>
+
+                    <li class="nav-item has-treeview menu-open">
+                        <a href="#" class="nav-link ">
+                            <i class="fas fa-chart-pie"></i>
+                            <p>
+                               Administration
+                                <i class="right fas fa-angle-left"></i>
+                            </p>
+                        </a>
+                        <ul class="nav nav-treeview">
+                            <li class="nav-item">
+                                <a href="/manage" class="nav-link">
+                                    <i class="fas fa-circle nav-icon"></i>
+                                    <p>Manage</p>
+                                </a>
+                            </li>
+
+                            <li class="nav-item ml-2">
+                                <a href="" class="nav-link">
+                                    <i class="fas fa-cash-register mr-1"></i>
+                                    <p class="ml-1">Manage Fees</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="{{route('student.index')}}" class="nav-link">
+                                    <i class="fas fa-user-graduate ml-1"></i>
+                                    <p class="ml-3">Manage Student</p>
+                                </a>
+                            </li>
+
+
+
+
+
+                            <li class="nav-item">
+                                <a href="" class="nav-link">
+                                    <i class="fas fa-circle nav-icon"></i>
+                                    <p>Manage course</p>
+                                </a>
+                            </li>
+
+
+                            <li class="nav-item">
+                                <a href="{{route('staff.index')}}" class="nav-link">
+                                    <i class="far fa-circle nav-icon"></i>
+                                    <p>Manage Staffs</p>
+                                </a>
+                            </li>
+
+                        </ul>
+                    </li>
+
+
+                    <li class="nav-item has-treeview menu-open">
+                        <a href="#" class="nav-link ">
+                            <i class="fas fa-book"></i>
+                            <p>
+                                Library
+                                <i class="right fas fa-angle-left"></i>
+                            </p>
+                        </a>
+                        <ul class="nav nav-treeview">
+                            <li class="nav-item">
+                                <a href="/libraryIndex" class="nav-link">
+                                    <i class="fas fa-book-open ml-1"></i>
+                                    <p class="ml-2">Lib Dashboard</p>
+                                </a>
+
+                                <a href="/manageBooks" class="nav-link">
+                                    <i class="fas fa-book ml-1"></i>
+                                    <p class="ml-2">Manage Books</p>
+                                </a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a href="/issueBooks" class="nav-link">
+                                    <i class="fas fa-align-justify ml-1"></i>
+                                    <p class="ml-2">Issue Books</p>
+                                </a>
+                            </li>
+
+
+                            <li class="nav-item">
+                                <a href="/libraryCard" class="nav-link">
+                                    <i class="fas fa-id-card ml-1 "></i>
+                                    <p class="ml-2">Library Card</p>
+                                </a>
+                            </li>
+
+
+
+                            <li class="nav-item">
+                                <a href="" class="nav-link">
+                                    <i class="far fa-circle nav-icon"></i>
+                                    <p>Manage Staffs</p>
+                                </a>
+                            </li>
+
+                        </ul>
+                    </li>
+
+
+
+
                     <li class="nav-item">
                         <a href="#" class="nav-link">
                             <i class="nav-icon fas fa-th"></i>
@@ -207,25 +311,10 @@ scratch. This page gets rid of all links and provides the needed markup only.
 
     <!-- Content Wrapper. Contains page content -->
     <div class="content-wrapper">
-        <!-- Content Header (Page header) -->
-        <div class="content-header">
-            <div class="container-fluid">
-                <div class="row mb-2">
-                    <div class="col-sm-6">
-                        <h1 class="m-0 text-dark">Starter Page</h1>
-                    </div><!-- /.col -->
-                    <div class="col-sm-6">
-                        <ol class="breadcrumb float-sm-right">
-                            <li class="breadcrumb-item"><a href="#">Home</a></li>
-                            <li class="breadcrumb-item active">Starter Page</li>
-                        </ol>
-                    </div><!-- /.col -->
-                </div><!-- /.row -->
-            </div><!-- /.container-fluid -->
-        </div>
-        <!-- /.content-header -->
 
-        <!-- Main content -->
+
+        @yield('headSection')
+
 
        @yield('content')
 
@@ -233,9 +322,6 @@ scratch. This page gets rid of all links and provides the needed markup only.
     </div>
 
 
-    <!-- /.content-wrapper -->
-
-    <!-- Control Sidebar -->
     <aside class="control-sidebar control-sidebar-dark">
         <!-- Control sidebar content goes here -->
         <div class="p-3">
@@ -248,18 +334,12 @@ scratch. This page gets rid of all links and provides the needed markup only.
     <!-- Main Footer -->
 
 </div>
-
+<link rel="stylesheet" type="text/css" href="{{asset('/img/jquery.dataTables.min.css')}}"/>
 <script src="{{asset('js/app.js')}}">
-
-
-    $(function () {
-        $("#data-table").DataTable();
-    });
-
-
-
-
 </script>
+
+@yield('scripts')
+
 </body>
 </html>
 

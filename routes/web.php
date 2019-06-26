@@ -19,10 +19,22 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-Auth::routes();
+Route::resource('student', 'studentController');
 
-Route::get('/home', 'HomeController@index')->name('home');
+Route::resource('staff', 'StaffController');
+Route::get('/manage', 'addController@index');
+Route::post('/addCourse', 'addController@addCourse');
 
-Auth::routes();
+Route::get('/manageBooks', 'addController@Booksmanage');
+Route::get('/issueBooks', 'addController@Booksissue');
+Route::get('/libraryCard', 'addController@libraryCard');
 
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/libraryIndex', 'addController@libraryIndex');
+
+
+
+
+
+
+
+
