@@ -22,13 +22,15 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::resource('student', 'studentController');
 
 Route::resource('staff', 'StaffController');
+Route::resource('Books', 'booksController');
+
+
+
 Route::get('/manage', 'addController@index');
 Route::post('/addCourse', 'addController@addCourse');
 
-Route::get('/manageBooks', 'addController@Booksmanage');
 Route::get('/issueBooks', 'addController@Booksissue');
 Route::get('/libraryCard', 'addController@libraryCard');
-
 Route::get('/libraryIndex', 'addController@libraryIndex');
 
 

@@ -7,7 +7,7 @@
         </div>
 
         <div class="card-body">
-            <form action="" class=" mt-2 " method="post" enctype="multipart/form-data">
+            <form action="{{route('Books.store')}}" class=" mt-2 " method="post" enctype="multipart/form-data">
                 @csrf
 
                 <div class="form-row">
@@ -25,6 +25,12 @@
                             <option>  Science  </option>
 
                         </select>
+                        <div class="text-danger">  </div>
+                    </div>
+
+                    <div class="form-group col-md-6">
+                        <label for="inputAddress">Author Name</label>
+                        <input type="text" class="form-control" id="authorName" name="authorName" placeholder="Author Name">
                         <div class="text-danger"></div>
                     </div>
 
@@ -44,11 +50,17 @@
                         <div class="text-danger"></div>
                     </div>
 
+                    <div class="form-group col-md-6">
+                        <label for="inputAddress">Price</label>
+                        <input type="number" class="form-control" id="price" name="price" placeholder="Price">
+                        <div class="text-danger"></div>
+                    </div>
+
 
                     <div class="form-group col-md-6">
                         <label for="inputAddress">Book Code</label>
                         <input type="text" class="form-control" id="bookCode" name="bookCode" placeholder="Book Code">
-                        <div class="text-danger"></div>
+                        <div class="text-danger">{{$errors->first('bookCode')}}</div>
                     </div>
 
                     <div class="form-group col-md-6">
@@ -63,7 +75,7 @@
                         <div class="form-group col-md-6">
                             <label for="inputAddress">ISBN Code</label>
                             <input type="text" class="form-control" id="bookCodeIsbn" name="bookCodeIsbn" placeholder="ISBN Code">
-                            <div class="text-danger"></div>
+                            <div class="text-danger">{{$errors->first('bookCodeIsbn')}}</div>
                         </div>
                     </div>
 

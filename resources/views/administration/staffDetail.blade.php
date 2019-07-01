@@ -8,7 +8,7 @@
             <h3 class="card-title">Staff Detail Table</h3>
         </div>
         <!-- /.card-header -->
-            <table id="example2" class="table-bordered" >
+            <table id="example2" class="table-bordered table-responsive" >
                 <thead>
                     <tr>
                         <th class="w-25 p-2">Image</th>

@@ -257,7 +257,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                                     <p class="ml-2">Lib Dashboard</p>
                                 </a>
 
-                                <a href="/manageBooks" class="nav-link">
+                                <a href="{{route('Books.index')}}" class="nav-link">
                                     <i class="fas fa-book ml-1"></i>
                                     <p class="ml-2">Manage Books</p>
                                 </a>
@@ -290,6 +290,25 @@ scratch. This page gets rid of all links and provides the needed markup only.
                         </ul>
                     </li>
 
+                    <li class="nav-item has-treeview menu-open">
+                        <a href="#" class="nav-link ">
+                            <i class="fas fa-book"></i>
+                            <p>
+                                Account
+                                <i class="right fas fa-angle-left"></i>
+                            </p>
+                        </a>
+                        <ul class="nav nav-treeview">
+                            <li class="nav-item">
+                                <a href="" class="nav-link">
+                                    <i class="fas fa-book-open ml-1"></i>
+                                    <p class="ml-2">Invoice Geerate</p>
+                                </a>
+
+                            </li>
+
+                        </ul>
+                    </li>
 
 
 

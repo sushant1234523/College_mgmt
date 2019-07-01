@@ -16,7 +16,7 @@
             <div class="form-group col-md-6">
                 <label for="inputAddress">Address</label>
                 <input type="text" class="form-control" id="std_add"  name="std_add" placeholder="1234 Main St">
-                <div class="text-danger"> {{$errors->first('std_add')}}  </div>
+                <div class="text-danger"> {{$errors->first('std_add')}} </div>
 
             </div>
         </div>
